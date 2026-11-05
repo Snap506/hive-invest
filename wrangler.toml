@@ -13,7 +13,7 @@ run_worker_first = ["/api/*"]
 [[d1_databases]]
 binding = "DB"
 database_name = "hive-invest"
-database_id = "PASTE-YOUR-DATABASE-ID-HERE"
+database_id = "6f05cde8-3d66-4cbf-a5fa-8cbacea2311d"
 migrations_dir = "migrations"
 
 # The daily check: 06:05 UTC = 08:05 in South Africa, a few minutes after the daily candle settles.
