@@ -1,0 +1,28 @@
+# Hive Invest — Cloudflare Worker + static app + D1 database + daily schedule.
+name = "hive-invest"
+main = "src/worker.js"
+compatibility_date = "2025-09-01"
+workers_dev = true
+
+[assets]
+directory = "./public"
+binding = "ASSETS"
+run_worker_first = ["/api/*"]
+
+# Create it with:  npx wrangler d1 create hive-invest   → paste the database_id it prints below.
+[[d1_databases]]
+binding = "DB"
+database_name = "hive-invest"
+database_id = "PASTE-YOUR-DATABASE-ID-HERE"
+migrations_dir = "migrations"
+
+# The daily check: 06:05 UTC = 08:05 in South Africa, a few minutes after the daily candle settles.
+[triggers]
+crons = ["5 6 * * *"]
+
+[vars]
+CLAUDE_MONTHLY_USD = "2"     # hard monthly cap for Claude answers, in US dollars
+USDZAR_FALLBACK = "17.5"     # only used if every live rand/dollar source is down
+
+[observability]
+enabled = true

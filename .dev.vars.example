@@ -1,0 +1,10 @@
+# Copy to .dev.vars for local testing (npm run dev). Never commit .dev.vars.
+APP_TOKEN=choose-a-long-passcode
+# Optional:
+# COINGECKO_API_KEY=
+# ANTHROPIC_API_KEY=
+# TELEGRAM_BOT_TOKEN=
+# TELEGRAM_CHAT_ID=
+# VALR_API_KEY=
+# VALR_API_SECRET=
+# VALR_SUBACCOUNT_ID=

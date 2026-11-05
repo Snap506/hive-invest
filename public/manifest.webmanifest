@@ -1,0 +1,9 @@
+{
+  "name": "Hive Invest",
+  "short_name": "Hive",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#03050d",
+  "theme_color": "#03050d",
+  "icons": [{ "src": "/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }]
+}

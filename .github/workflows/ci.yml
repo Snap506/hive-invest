@@ -1,0 +1,20 @@
+# Runs the tests and a build check on every push and pull request.
+# Deploying is done by Cloudflare Workers Builds (see DEPLOY.md → "Automatic deploys from GitHub"),
+# so no Cloudflare keys are stored in GitHub.
+name: CI
+on:
+  push:
+  pull_request:
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm test
+      - name: Build check (no upload)
+        run: npx wrangler deploy --dry-run --outdir .wrangler/dry

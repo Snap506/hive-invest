@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en-ZA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Hive Invest</title>
+<meta name="description" content="A long-term main account and a small, rule-based Bitcoin trading account — live prices, one daily check.">
+<meta name="theme-color" content="#03050d">
+<link rel="manifest" href="/manifest.webmanifest">
+<link rel="icon" href="/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/icon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/app.css?v=2.3.0">
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <div class="row">
+      <div class="brand"><i>◆</i> HIVE · INVEST</div>
+      <span class="pill" id="px-pill">—</span>
+      <span class="pill" id="live-pill">Connecting…</span>
+    </div>
+    <nav class="tabs" id="tabs" role="tablist" aria-label="Sections"></nav>
+  </header>
+  <div id="banner"></div>
+  <div class="head"><h1 id="title"></h1><p id="sub"></p></div>
+  <main id="body"><div class="skel"></div><div class="skel"></div></main>
+</div>
+<div class="sheet" id="sheet" hidden role="dialog" aria-modal="true" aria-label="Trade ticket"><div class="box" id="sheet-body"></div></div>
+<div class="toast" id="toast" hidden role="status" aria-live="polite"></div>
+<noscript><p style="padding:20px">Hive Invest needs JavaScript.</p></noscript>
+<script type="module" src="/js/app.js?v=2.3.0"></script>
+</body>
+</html>
